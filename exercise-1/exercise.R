@@ -11,17 +11,17 @@ AddThree <- function(a){
 
 ten <- AddThree(7)
 
-# Write a function `FeetToMeters` that converts from feet to meters
+# Define a function `ImperialToMetric` that takes in two arguments: a number of feet
+# and a number of inches
+# The function should return the total length in meters
 
-FeetToMeters <- function(feet){
-  
-  return(feet*0.3048)
+ImperialToMetric <- function(feet, inches){
+  feet.to.inches <- feet*12
+  meters <- (feet.to.inches+inches)*0.0254
+  return(meters)
 }
 
-# Create a variable `height.in.feet` that is your height in feet
-
-height.in.feet <- 5.07
-
-# Create a variable `height.in.meters` by passing `height.in.feet` to your `FeetToMeters`function
-
-height.in.meters <- FeetToMeters(height.in.feet)
+# Create a variable `height.in.meters` by passing your height in imperial to the
+# `ImperialToMetric` function
+height.in.meters <- ImperialToMetric(5, 7)
+print(height.in.meters)
